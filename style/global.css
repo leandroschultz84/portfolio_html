@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --white: #fff;
+    --dark1: #34344e;
+    --dark2: #3a415a;
+    --dark3: #566981;
+    --dark4: #89a7b1;
+    --dark5: #cbdad5;
+    --dark6: #2f2f46;
+    --cyan1: #70e3ea;
+    --azul:  #3f87d4;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--dark2);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--dark3);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--dark4);
+}
+
+body{
+    background-color: var(--dark1);
+    height: 100vh;
+    font-family: 'Lato';
+}
+
+.img-logo{
+    /* margin-left: -18.5em; */
+    justify-content: center;
+    align-items: center;
+    /* transform: translateX(-250%); */
+    width: 100px;
+    height: 100%;
+}
+
+.header{
+    justify-content: space-between;
+    align-items: center;
+    gap: 15rem;
+    background-color: var(--dark6);
+    padding: 1% 10%;
+    height: 3.5em;
+    
+}
+
+.header,
+.navigation_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 3em;
+    z-index: 2;
+    padding-right: 88px; /* ajuste este valor se precisar */
+}
+
+
+
+
+
+.nav-links {
+   
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links:hover {
+   
+    background-color: var(--azul);
+    border-radius: 4px;
+}
+
+/* Item ativo (clicado) */
+.nav-links.active {
+    color: white;
+    
+}
+
+.navigation_header a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navigation_header a:hover{
+    transition: .4s;
+    color: var(--white);
+}
+
+.nav-links {
+  white-space: nowrap;
+}
+
+body.light-mode #navigation_header {
+    display: flex;
+    
+  
+}
+
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #007acc;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.project-card p {
+  margin-top: 8px;
+  color: #555;
+  font-size: 0.95em;
+}
+
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 3px solid #ccc;
+  border-top: 3px solid #007acc;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+
+#toggle-theme:active img,
+#toggle-theme:focus img {
+  transform: none !important;
+  scale: 1 !important;
+}
+
+#theme-icon {
+  transition: filter 0.3s ease;
+  pointer-events: none;
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+
+#toggle-theme img {
+  display: block;
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+  transition: none !important;
+  transform: none !important;
+  scale: 1 !important;
+}
+
+
+
+
+#toggle-theme {
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 4px;
+
+}
+
+/* Modo claro: fundo branco, borda preta */
+body.light-mode #toggle-theme {
+    background-color: white;
+    border-color: black;
+}
+
+/* Ícone visível no fundo branco */
+body.light-mode #toggle-theme img {
+    filter: brightness(0); /* ícone preto */
+}
+
+body.dark-theme #toggle-theme {
+  background-color: var(--dark6); /* cor escura personalizada */
+  border: 2px solid #fff; /* borda clara para contraste */
+  color: white; /* se tiver texto no botão */
+}
+
+/* Ícone branco no fundo escuro */
+body.dark-theme #toggle-theme img {
+    filter: brightness(0) invert(1); /* ícone branco */
+}
+
+/* Garante que os links do menu fiquem visíveis no modo claro */
+body.light-mode .menu-top .nav-links {
+    display: inline-block;   /* força exibição */
+    color: black;            /* cor visível no fundo claro */
+}
+
+/* Hover no modo claro */
+body.light-mode .menu-top .nav-links:hover {
+    color: var(--cyan1);
+}
+
+
+.Skills-list li {
+    color: var(--white) !important;
+    
+  padding: 5px 10px;         /* Espaçamento interno */
+  border-radius: 5px; 
+  display: inline-block;
+
+    
+    
+}
+
+.Skills-list{
+    
+    flex-wrap: wrap;
+
+
+}
+
+
+
+#soft-skills {
+  padding: 4rem;
+  text-align: center;
+  
+}
+
+
+#soft-skills h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--cyan1);
+}
+
+
+#soft-skills .Skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+
+
+#soft-skills .Skills-list li {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--dark3);
+  color: var(--white);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+#soft-skills .Skills-list li:hover {
+  
+  color: white;
+  cursor: default;
+}
+
+body.light-mode #soft-skills {
+  background-color: #f5f5f5; /* fundo claro */
+}
+
+
+body.light-mode #soft-skills h2 {
+  color: #007bff; /* título azul no claro */
+}
+
+body.light-mode #soft-skills .Skills-list li {
+  background-color: #e0e0e0; /* caixinha cinza claro */
+  color: #333; /* texto escuro */
+}
+
+body.light-mode #soft-skills .Skills-list li:hover {
+  
+  color: #fff;
+}
+
+
+/* Hover */
+#toggle-theme:hover {
+    background-color: var(--azul);
+}
+
+/* Ativo (tema escuro ativado) */
+#toggle-theme.active {
+    background-color: var(--azul);
+}
+
+button:focus i,
+button:active i {
+  transform: none;
+}
+
+.btn_icon_header{
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .btn_icon_header{
+        display: block;
+    }
+    .navigation_header{
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background: var(--dark6);
+        height: 100%;
+        width: 35vh;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vh;
+
+         padding-right: 0;   /* não precisa mais do “respiro” */
+        gap: 1.5rem;        /* gap um pouco menor ajuda a caber tudo */
+    }
+}
+
+@keyframes showSidebar {
+    from{margin-left: -100vh;}
+    top{margin-left: -10vh;}
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section{
+    padding: 4rem;
+}
+
+.first-section{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 650px;
+    background-color: var(--dark2);
+    
+    
+}
+
+.first-section > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 300px;
+}
+
+h1{
+    font-size: 4rem;
+    color: var(--white);
+    letter-spacing: 8px;
+}
+
+p{
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+.menu-top {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+
+/* empurra os links e o botão de tema para a direita */
+.menu-top .nav-links,
+.menu-top {
+  margin-left: auto;
+}
+
+.theme-button-wrapper {
+  position: fixed;
+  top: 20px;       /* distância do topo */
+  right: 20px;     /* distância da borda direita */
+  z-index: 1000;   /* garante que fique acima de outros elementos */
+}
+
+#toggle-theme {
+    background-color: var(--dark6); /* fundo escuro */
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Forçar o link Soft Skills a aparecer sempre */
+body.light-mode a[href="#soft-skills"] {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: inherit !important;
+}
+
+
+
+/* Modo claro: fundo branco */
+body.light-mode #toggle-theme {
+    background-color: white;
+    border-color: black;
+}
+
+/* Modo escuro: fundo azul */
+body.dark-theme #toggle-theme {
+    background-color: var(--azul);
+    border-color: transparent;
+}
+
+
+
+#toggle-theme img {
+    filter: brightness(0) invert(1); /* transforma em branco */
+}
+
+
+
+.theme-button-wrapper {
+   position: static;   /* sai do absoluto */
+    right: auto;
+    top: auto;
+    z-index: auto;
+    margin-left: auto;  /* empurra para a direita */
+    
+    
+
+}
+
+
+
+
+
+strong{
+    color: var(--cyan1);
+}
+
+.first-section p{
+    color: var(--white);
+    line-height: 1.8; /* aumenta o espaçamento vertical entre as linhas */
+    font-size: 1.4rem;
+}
+
+:is(button,.link-action){
+    padding: .6rem;
+    font-size: .9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btn-action{
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 10px;
+}
+
+.btn-action:hover{
+    background-color: var(--dark3);
+    border: 1px solid var(--dark3);
+}
+
+.link-action{
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+}
+
+.box-img-main{
+    max-width: 350px;
+    padding: 1rem;
+    width: 130px;
+}
+
+.box-img-header{
+    margin-left: -10px;
+
+
+}
+
+
+.img-profile{
+    border-radius: 50%;
+    width: 85%;
+    
+} 
+
+:is(.second-section,.fourth-section){
+    background-color: var(--dark2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.second-section ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.second-section ul li{
+    color: var(--dark4);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.second-section ul li:hover{
+    color: var(--cyan1);
+    transition: .4s;
+    cursor: default;
+}
+
+.title{
+    font-size: 1.5rem;
+    color: var(--dark5);
+}
+
+.project-instruction{
+    color: var(--cyan1);
+
+
+}
+
+.title1{
+    font-size: 1.5rem;
+    color: var(--dark5) !important;  
+    text-align: center;  
+
+
+}
+.third-section{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    
+}
+
+.third-section > div{
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.third-section > div img{
+    width: 200px;
+    border-radius: 10px;
+}
+
+.third-section > div p{
+    font-size: 20px;
+    max-width: 600px;
+    color: var(--white);
+    text-align: justify;
+    letter-spacing: 3px;
+}
+
+footer{
+    padding: 1rem;
+    background-color: var(--dark6);
+    color: var(--white);
+    text-align: center;
+    max-height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactos{
+    padding-bottom: 2rem;
+}
+
+footer > div{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Estilo base para ícones do footer */
+/* Estilo base */
+footer svg {
+    width: 32px;
+    height: 32px;
+    transition: fill 0.3s ease;
+}
+
+/* Modo claro: ícones pretos */
+body.light-mode footer svg {
+    fill: black !important;
+}
+
+/* Modo escuro: ícones brancos */
+body.dark-theme footer svg {
+    fill: white;
+}
+
+
+#my-projects-list{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#my-projects-list a{
+    text-decoration: none;
+    color: var(--dark4);
+}
+
+#my-projects-list a:hover{
+    color: var(--cyan1);
+    transition: .4s;
+    cursor: pointer;
+}
+
+:is(.img-profile,
+.img-who-am-i){
+    box-shadow: 1px 1px 1px 1px var(--cyan1);
+}
+
+#who-am-i {
+    background-color: var(--dark2)
+    
+}
+
+#experiences{
+    background-color: var(--dark1);
+
+
+}
+
+
+
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.logotipos{
+  	max-width: 100px;
+  	width: 100%;
+  	height: auto;
+	visibility:visible
+}
+
+
+
+
+.logo_container{
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.logotipos_fm{
+	max-width: 250px;
+  	width: 150%;
+	height: auto;
+
+	
+
+}
+
+.Skills-list{
+    
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    flex-wrap: wrap;         
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    list-style: none;
+  
+}
+
+li{
+    list-style-type: none;
+   
+
+}
+
+.skills-list li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+body.light-mode {
+  --white: #000;
+  --dark1: #f5f5f5;
+  --dark2: #e0e0e0;
+  --dark3: #cccccc;
+  --dark4: #999999;
+  --dark5: #666666;
+  --dark6: #ffffff;
+  --cyan1: #007bff;
+}
+
+   

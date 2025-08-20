@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="./favicon/ls_icon.png" type="image/png">
+		<link rel="stylesheet" href="./style/global.css">
+        <title>Leandro Schultz | LandingPage</title>
+    </head>
+    <body class="dark-theme">
+        <header class="header" id="header">
+            <button onclick="toggleSidebar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"  class="bi bi-list" viewBox="0 0 16 16">
+                    <path  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button><!--btn_icon_header-->
+            <div class="box-img-header">
+                <a href="index.html" id="logo" class="logo">
+                    <img class="img-logo" src="./assets/schultz_logo.png" alt="Logotipo LSchultz" title="Logotipo LSchultz">
+                </a>
+            </div><!--box-img-header-->
+            <div onclick="toggleSidebar()" class="navigation_header" id="navigation_header">
+            
+            
+            <div class="menu-top">   
+                <button class="btn_icon_header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"  class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                </button><!--btn_icon_header-->
+               
+                
+               
+               
+                
+                <a href="#experiences" class="nav-links">Tecnologias</a>
+                <a href="#who-am-i" class="nav-links">Sobre o Autor</a>
+                <a href="#my-projects" class="nav-links">Meus Projetos</a>
+                <a href="#contact" class="nav-links">Contatos</a>
+                <a href="#soft-skills" class="nav-links">Soft Skills</a>
+
+                
+
+                
+                <div class="theme-button-wrapper">
+
+                    <button id="toggle-theme">
+                        <img id="theme-icon" src="./assets/theme_light_dark_icon.svg" alt="dark-mode" width="25" height="25">
+                    </button>
+                </div>    
+            </div>
+            
+           
+            
+
+            
+        </header>
+        <div class="web-page-content">
+            <div tabindex="0" onclick="closeSidebar()" class="content" id="content">
+                <main>
+                    <section class="first-section">
+                        <div>
+                            <h1>Olá! Eu sou o <br> <strong>Leandro Schultz</strong></h1>
+                            <p>Sou <strong>Analista De Suporte</strong> em transição de carreira <br> para <strong>Desenvolvedor Web</strong>.</p>
+                            
+                            <a href="https://github.com/leandroschultz84" class="btn-action link-action" id="sabermais">
+                                Saiba Mais
+                            </a>
+                        </div>
+                        <div class="box-img-main">
+                            <img class="img-profile" src="./assets/foto_perfil.jpg" alt="Leandro Schultz - Perfil">
+                        </div>
+                    </section>
+
+                    <section id="experiences" class="second-section">
+                        <h2 class="title">Conhecimento nas principais tecnologias do mercado</h2>
+                    	
+						<section class="logo_container">
+
+							<figure class="container_logo">
+								<img src="./assets/css_logo.svg" class="logotipos" alt="css-logo">
+								
+							</figure>
+							
+							<figure class="container_logo">	
+								<img src="./assets/html_logo.svg" class="logotipos" alt="logo-html">
+								
+							</figure>
+							
+							<figure class="container_logo">	
+								<img src="./assets/javascript_logo.svg" class="logotipos" alt="js-logo">
+							</figure>
+							
+							<figure class="container_logo">	
+								<img src="./assets/c_logo.svg" class="logotipos" alt="c-logo">
+							</figure>
+							
+							<figure class="container_logo">	
+								<img src="./assets/figma_logo.svg" class="logotipos_fm" alt="figma-logo">
+							</figure>
+						</section>
+						
+						
+                    </section><!--second-section-->
+
+                    <section id="who-am-i" class="third-section">
+                        <h2 class="title1">Sobre o Autor</h2>
+                        <div>
+                            <img class="img-who-am-i" src="./assets/foto_perfil.jpg" alt="Leandro Schultz - Foto">
+                            <p class="author-paragraph">Atualmente em transição de carreira, venho da área 
+                            de <strong>Suporte Técnico,</strong> onde desenvolvi habilidades sólidas em resolução 
+                            de problemas, comunicação e atenção aos detalhes. Agora, estou mergulhando no universo 
+                            do <strong>Desenvolvimento Web,</strong> com foco em <strong>Front-End.</strong>
+
+
+                        </div>
+                    </section><!--third-section-->
+
+
+                    <section id="soft-skills" class="third-section">
+                        <h2 class="title1">Soft Skills</h2>
+                        <ul class="Skills-list">
+                            
+                            <li>Trabalho Em Equipe</li>
+                            <li>Organização</li>
+                            <li>Liderança</li>
+                            <li>Empatia</li>
+                            <li>Flexibilidade</li>
+                        </ul>
+                    </section><!--third-section-->
+
+                    <section id="my-projects" class="fourth-section">
+                         <h2 class="title">Meus Projetos</h2>
+  
+                        <p class="project-instruction">
+                        🔗 Clique na descrição do projeto para visitar o repositório no GitHub.
+                        </p>
+  
+                        <p id="loading">A carregar...</p>
+  
+                        <div id="my-projects-list" class="projects-container"></div>
+                    </section>
+                </main>
+
+                <footer id="contact">
+                    <h2 class="title contactos">Contatos</h2>
+                    <div>
+                    
+                        <a href="https://www.linkedin.com/in/leandro-schultz-aa511924" target="_blank" title="Linkedin">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"  class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.github.com/leandroschultz84" target="_blank" title="Github">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:recompensa.suporte@gmail.com" target="_blank" title="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"  class="bi bi-email" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+
+
+        <script src="./scripts/main.js" defer></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            // Ativa navegação
+            const links = document.querySelectorAll('.nav-links');
+            links.forEach(link => {
+            link.addEventListener('click', () => {
+                setTimeout(() => {
+                links.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                }, 100);
+            });
+            });
+
+            // Alternância de tema
+            const themeBtn = document.getElementById('toggle-theme');
+            const body = document.body;
+
+            // Verifica tema salvo
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "light") {
+            body.classList.add("light-mode");
+            body.classList.remove("dark-theme");
+            } else {
+            body.classList.add("dark-theme");
+            body.classList.remove("light-mode");
+            }
+
+            // Alterna tema ao clicar
+            themeBtn.addEventListener("click", () => {
+                if (body.classList.contains("dark-theme")) {
+                    body.classList.remove("dark-theme");
+                    body.classList.add("light-mode");
+                    localStorage.setItem("theme", "light");
+
+                } else {body.classList.remove("light-mode");
+                    body.classList.add("dark-theme");
+                    localStorage.setItem("theme", "dark");
+                    
+                }
+                });
+            });
+        </script>
+    </body>
+
+   
+
+</html>
